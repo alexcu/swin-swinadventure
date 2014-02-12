@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" >
+	<!-- Description: SwinAdventure Processor for XML to C++ -->
+	<!-- Author: Alex Cummaudo -->
+	<!-- Date: 7 Nov 2013 -->
+	<head>
+       	<title>SwinAdventure XML to C++ Parser</title>
+       	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Alex Cummaudo" />
+        <meta name="description" content="Some description of page content" />
+        <meta name="keywords" content="keyword1, keyword2, keyword3, etc" />
+        <!--Bootstrap CSS Plugin-->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+        <style type="text/css">
+            body { background: #EEE; width: 800px; margin: 50px auto; }
+            hr { height: 10px; }
+            textarea#input { font-family: "Menlo", "Courier-New", monospace !important; }
+            #results pre { cursor: pointer; }
+        </style>
+        <!-- Highlight.js-->
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/7.5/styles/default.min.css">
+        <script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
+	</head>
+	<body>
+        <div class="page-header">
+          <h1>SwinAdventure</h1>
+          <p class="lead">XML to C++ Processor</p>
+          <p> By Alex Cummaudo 1744070 </p>
+        </div>
+		<form id="leform" class="form-horizontal" role="form" onsubmit="parseCpp(); return false;">
+    		<div class="form-group">
+        		<textarea wrap="off" class="form-control" id="input" placeholder="Paste XML Here" rows="20"></textarea>
+    		</div>
+            <div>
+                <input type="submit" class="btn btn-primary" />
+                <input type="button" value="Example" onclick="example();" class="btn btn-warning pull-right" />
+            </div>
+		</form>
+		<div id="results">
+		</div>
+		
+		<h2> How to Use </h2>
+		<ol>
+    		<li><a href="game.xml">Download</a> an XML template here, appropriately commented. Paste your changes above and hit submit.</li>
+    		<li>Grab a copy of <a href="./SwinAdventure.zip">SwinAdventure</a>, and replace the contents of <code>game.txt</code> with the copied content.</li>
+    		<li>Run <code>build.sh</code> in your favourite UNIX shell (try <a href="http://www.mingw.org">MinGW</a> on Windows). Have fun!</li>
+		</ol>
+    		
+		<!--jQuery and Bootstrap JavaScript Plugins-->
+	    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        
+        <!-- My AJAX Files -->
+        <script type="text/javascript" src="ajax-request.js"></script>
+        <script type="text/javascript">     
+        function parseCpp()
+        {
+            inputBox = document.getElementById("input");
+            sendPostRequest("parser.php", 
+                            // Callback
+                            function()
+                            { 
+                                $("#results").html("<h3> Results: </h3> <p> Click code below to highlight. Copy into <code>game.txt</code>. </p> <pre onclick='$(this).selectText()'>"+xhrResponse+"</pre>").hide().slideDown("slow");
+                                // Prettyify output
+                                $('#results').each(function(i, e) {hljs.highlightBlock(e)});
+                            }, 
+                            "input="+inputBox.value);
+        }     
+        function example()
+        {
+            sendGetRequest("game.xml",
+                            // Callback
+                            function()
+                            {
+                                document.getElementById("input").value = xhrResponse;
+                                parseCpp();
+                            },
+                            "");
+            
+        }  
+        
+        // SELECT TEXT (stack overflow)
+        $.fn.selectText = function () {
+        return $(this).each(function (index, el) {
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(el);
+            range.select();
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(el);
+            window.getSelection().addRange(range);
+        }
+        });
+        }
+        </script>
+
+
+	</body>
+</html>

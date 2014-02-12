@@ -1,0 +1,959 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA0E5B181801781A00EDA427 /* Bag_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA0E5B171801781A00EDA427 /* Bag_test.mm */; };
+		FA10DE2817EC3001003D3460 /* GameObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2417EC3001003D3460 /* GameObj.cpp */; };
+		FA10DE2917EC3001003D3460 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2617EC3001003D3460 /* Player.cpp */; };
+		FA10DE2E17EC3010003D3460 /* Inventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2A17EC3010003D3460 /* Inventory.cpp */; };
+		FA10DE2F17EC3010003D3460 /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2C17EC3010003D3460 /* Item.cpp */; };
+		FA10DE3017EC302C003D3460 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2617EC3001003D3460 /* Player.cpp */; };
+		FA10DE3117EC302F003D3460 /* GameObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2417EC3001003D3460 /* GameObj.cpp */; };
+		FA10DE3217EC3032003D3460 /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2C17EC3010003D3460 /* Item.cpp */; };
+		FA10DE3317EC3036003D3460 /* Inventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2A17EC3010003D3460 /* Inventory.cpp */; };
+		FA10DE3617EC37F3003D3460 /* Player_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE3517EC37F3003D3460 /* Player_test.mm */; };
+		FA10DE3817EC3884003D3460 /* Item_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE3717EC3884003D3460 /* Item_test.mm */; };
+		FA10DE3A17EC3C82003D3460 /* Inventory_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE3917EC3C82003D3460 /* Inventory_test.mm */; };
+		FA112808180E602000440A33 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA112806180E602000440A33 /* Path.cpp */; };
+		FA112809180E602000440A33 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA112806180E602000440A33 /* Path.cpp */; };
+		FA11280B180E65B500440A33 /* Path_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA11280A180E65B500440A33 /* Path_test.mm */; };
+		FA11280E180E7F7A00440A33 /* MoveCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA11280C180E7F7A00440A33 /* MoveCommand.cpp */; };
+		FA11280F180E7F7A00440A33 /* MoveCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA11280C180E7F7A00440A33 /* MoveCommand.cpp */; };
+		FA292438182CEB830047A578 /* TakeCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA292436182CEB830047A578 /* TakeCommand.cpp */; };
+		FA292439182CEB830047A578 /* TakeCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA292436182CEB830047A578 /* TakeCommand.cpp */; };
+		FA43A6B1180E958400444123 /* MoveCommand_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA43A6B0180E958400444123 /* MoveCommand_test.mm */; };
+		FA4B1437182BD25A002B5B9E /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4B1433182BD25A002B5B9E /* Command.cpp */; };
+		FA4B1438182BD25A002B5B9E /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4B1433182BD25A002B5B9E /* Command.cpp */; };
+		FA4B1439182BD25A002B5B9E /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4B1435182BD25A002B5B9E /* Game.cpp */; };
+		FA4B143A182BD25A002B5B9E /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4B1435182BD25A002B5B9E /* Game.cpp */; };
+		FA6284CB18016F97009458C5 /* Bag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6284C918016F97009458C5 /* Bag.cpp */; };
+		FA6284CC18016F97009458C5 /* Bag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6284C918016F97009458C5 /* Bag.cpp */; };
+		FA9FF17A18036BD6008FDD60 /* LookCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF17818036BD6008FDD60 /* LookCommand.cpp */; };
+		FA9FF17B18036BD6008FDD60 /* LookCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF17818036BD6008FDD60 /* LookCommand.cpp */; };
+		FA9FF1811803EEB0008FDD60 /* LookCommand_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1801803EEB0008FDD60 /* LookCommand_test.mm */; };
+		FAA732B9183C6D8D006EFBEB /* QuitCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FADBC82F182B65920057B70B /* QuitCommand.cpp */; };
+		FAA732BA183C6D8D006EFBEB /* TakeCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA292436182CEB830047A578 /* TakeCommand.cpp */; };
+		FAA732BB183C6D8D006EFBEB /* PutCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFDFF67182CF84D00D56BAD /* PutCommand.cpp */; };
+		FAA732BC183C6DD4006EFBEB /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4B1433182BD25A002B5B9E /* Command.cpp */; };
+		FAB5DA4D182B249B00FC0145 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD10E7417EA957600F432E8 /* Cocoa.framework */; };
+		FAB5DA53182B249B00FC0145 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAB5DA51182B249B00FC0145 /* InfoPlist.strings */; };
+		FAB5DA55182B249B00FC0145 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DA54182B249B00FC0145 /* main.m */; };
+		FAB5DA59182B249B00FC0145 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FAB5DA57182B249B00FC0145 /* Credits.rtf */; };
+		FAB5DA5C182B249B00FC0145 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DA5B182B249B00FC0145 /* AppDelegate.mm */; };
+		FAB5DA5F182B249B00FC0145 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB5DA5D182B249B00FC0145 /* MainMenu.xib */; };
+		FAB5DA61182B249B00FC0145 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB5DA60182B249B00FC0145 /* Images.xcassets */; };
+		FAB5DA68182B249B00FC0145 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB5DA67182B249B00FC0145 /* XCTest.framework */; };
+		FAB5DA69182B249B00FC0145 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD10E7417EA957600F432E8 /* Cocoa.framework */; };
+		FAB5DA71182B249B00FC0145 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAB5DA6F182B249B00FC0145 /* InfoPlist.strings */; };
+		FAB5DA73182B249B00FC0145 /* SwinAdventureGUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DA72182B249B00FC0145 /* SwinAdventureGUITests.m */; };
+		FAB5DA7C182B2BA600FC0145 /* CommandProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DA7A182B2BA600FC0145 /* CommandProcessor.cpp */; };
+		FAB5DA7E182B373600FC0145 /* CommandProcessor_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DA7D182B373600FC0145 /* CommandProcessor_test.mm */; };
+		FAB5DA7F182B382A00FC0145 /* CommandProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DA7A182B2BA600FC0145 /* CommandProcessor.cpp */; };
+		FAD0D9CA1809146A0031D728 /* Location.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0D9C81809146A0031D728 /* Location.cpp */; };
+		FAD0D9CB1809146A0031D728 /* Location.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0D9C81809146A0031D728 /* Location.cpp */; };
+		FAD0D9CD18091DBB0031D728 /* Location_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD0D9CC18091DBB0031D728 /* Location_test.mm */; };
+		FAD10E5F17EA851600F432E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD10E5E17EA851600F432E8 /* main.cpp */; };
+		FAD10E6117EA851600F432E8 /* SwinAdventure.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAD10E6017EA851600F432E8 /* SwinAdventure.1 */; };
+		FAD10EA217EA9DBB00F432E8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD10E7217EA957600F432E8 /* SenTestingKit.framework */; };
+		FAD10EA317EA9DBB00F432E8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD10E7417EA957600F432E8 /* Cocoa.framework */; };
+		FAD10EA917EA9DBB00F432E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAD10EA717EA9DBB00F432E8 /* InfoPlist.strings */; };
+		FAD10EB317EA9EB600F432E8 /* IdObj_test.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD10EB217EA9EB600F432E8 /* IdObj_test.mm */; };
+		FAD10EB717EAA55F00F432E8 /* IdObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD10EB517EAA55F00F432E8 /* IdObj.cpp */; };
+		FAD10EB817EAA55F00F432E8 /* IdObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD10EB517EAA55F00F432E8 /* IdObj.cpp */; };
+		FADBC823182B53AF0057B70B /* CommandProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DA7A182B2BA600FC0145 /* CommandProcessor.cpp */; };
+		FADBC825182B53AF0057B70B /* LookCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF17818036BD6008FDD60 /* LookCommand.cpp */; };
+		FADBC826182B53AF0057B70B /* MoveCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA11280C180E7F7A00440A33 /* MoveCommand.cpp */; };
+		FADBC827182B53AF0057B70B /* IdObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD10EB517EAA55F00F432E8 /* IdObj.cpp */; };
+		FADBC828182B53AF0057B70B /* Bag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA6284C918016F97009458C5 /* Bag.cpp */; };
+		FADBC829182B53AF0057B70B /* GameObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2417EC3001003D3460 /* GameObj.cpp */; };
+		FADBC82A182B53AF0057B70B /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2C17EC3010003D3460 /* Item.cpp */; };
+		FADBC82B182B53AF0057B70B /* Inventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2A17EC3010003D3460 /* Inventory.cpp */; };
+		FADBC82C182B53AF0057B70B /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA10DE2617EC3001003D3460 /* Player.cpp */; };
+		FADBC82D182B53AF0057B70B /* Location.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAD0D9C81809146A0031D728 /* Location.cpp */; };
+		FADBC82E182B53AF0057B70B /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA112806180E602000440A33 /* Path.cpp */; };
+		FADBC831182B65920057B70B /* QuitCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FADBC82F182B65920057B70B /* QuitCommand.cpp */; };
+		FADBC832182B65920057B70B /* QuitCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FADBC82F182B65920057B70B /* QuitCommand.cpp */; };
+		FAFDFF69182CF84D00D56BAD /* PutCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFDFF67182CF84D00D56BAD /* PutCommand.cpp */; };
+		FAFDFF6A182CF84D00D56BAD /* PutCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFDFF67182CF84D00D56BAD /* PutCommand.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAB5DA6A182B249B00FC0145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD10E5317EA851600F432E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAB5DA4B182B249B00FC0145;
+			remoteInfo = SwinAdventureGUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAD10E5917EA851600F432E8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				FAD10E6117EA851600F432E8 /* SwinAdventure.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA0E5B171801781A00EDA427 /* Bag_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Bag_test.mm; sourceTree = "<group>"; };
+		FA10DE2417EC3001003D3460 /* GameObj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObj.cpp; sourceTree = "<group>"; };
+		FA10DE2517EC3001003D3460 /* GameObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObj.h; sourceTree = "<group>"; };
+		FA10DE2617EC3001003D3460 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		FA10DE2717EC3001003D3460 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		FA10DE2A17EC3010003D3460 /* Inventory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inventory.cpp; sourceTree = "<group>"; };
+		FA10DE2B17EC3010003D3460 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
+		FA10DE2C17EC3010003D3460 /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
+		FA10DE2D17EC3010003D3460 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		FA10DE3517EC37F3003D3460 /* Player_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Player_test.mm; sourceTree = "<group>"; };
+		FA10DE3717EC3884003D3460 /* Item_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Item_test.mm; sourceTree = "<group>"; };
+		FA10DE3917EC3C82003D3460 /* Inventory_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Inventory_test.mm; sourceTree = "<group>"; };
+		FA112806180E602000440A33 /* Path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
+		FA112807180E602000440A33 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
+		FA11280A180E65B500440A33 /* Path_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Path_test.mm; path = "../Swin Adventure/Path_test.mm"; sourceTree = "<group>"; };
+		FA11280C180E7F7A00440A33 /* MoveCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoveCommand.cpp; sourceTree = "<group>"; };
+		FA11280D180E7F7A00440A33 /* MoveCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCommand.h; sourceTree = "<group>"; };
+		FA292436182CEB830047A578 /* TakeCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TakeCommand.cpp; sourceTree = "<group>"; };
+		FA292437182CEB830047A578 /* TakeCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeCommand.h; sourceTree = "<group>"; };
+		FA43A6B0180E958400444123 /* MoveCommand_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MoveCommand_test.mm; path = "../Swin Adventure/MoveCommand_test.mm"; sourceTree = "<group>"; };
+		FA4B1432182B9E1B002B5B9E /* game.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = game.txt; sourceTree = "<group>"; };
+		FA4B1433182BD25A002B5B9E /* Command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Command.cpp; sourceTree = "<group>"; };
+		FA4B1434182BD25A002B5B9E /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		FA4B1435182BD25A002B5B9E /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		FA4B1436182BD25A002B5B9E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		FA6284C918016F97009458C5 /* Bag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bag.cpp; sourceTree = "<group>"; };
+		FA6284CA18016F97009458C5 /* Bag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bag.h; sourceTree = "<group>"; };
+		FA9FF17818036BD6008FDD60 /* LookCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LookCommand.cpp; sourceTree = "<group>"; };
+		FA9FF17918036BD6008FDD60 /* LookCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookCommand.h; sourceTree = "<group>"; };
+		FA9FF17D18036D18008FDD60 /* IHaveInventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHaveInventory.h; sourceTree = "<group>"; };
+		FA9FF1801803EEB0008FDD60 /* LookCommand_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LookCommand_test.mm; path = "../Swin Adventure/LookCommand_test.mm"; sourceTree = "<group>"; };
+		FAB5DA4C182B249B00FC0145 /* SwinAdventureGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwinAdventureGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB5DA50182B249B00FC0145 /* SwinAdventureGUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwinAdventureGUI-Info.plist"; sourceTree = "<group>"; };
+		FAB5DA52182B249B00FC0145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAB5DA54182B249B00FC0145 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAB5DA56182B249B00FC0145 /* SwinAdventureGUI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwinAdventureGUI-Prefix.pch"; sourceTree = "<group>"; };
+		FAB5DA58182B249B00FC0145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		FAB5DA5A182B249B00FC0145 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAB5DA5B182B249B00FC0145 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		FAB5DA5E182B249B00FC0145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FAB5DA60182B249B00FC0145 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAB5DA66182B249B00FC0145 /* SwinAdventureGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwinAdventureGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB5DA67182B249B00FC0145 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FAB5DA6E182B249B00FC0145 /* SwinAdventureGUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwinAdventureGUITests-Info.plist"; sourceTree = "<group>"; };
+		FAB5DA70182B249B00FC0145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAB5DA72182B249B00FC0145 /* SwinAdventureGUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwinAdventureGUITests.m; sourceTree = "<group>"; };
+		FAB5DA7A182B2BA600FC0145 /* CommandProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandProcessor.cpp; sourceTree = "<group>"; };
+		FAB5DA7B182B2BA600FC0145 /* CommandProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandProcessor.h; sourceTree = "<group>"; };
+		FAB5DA7D182B373600FC0145 /* CommandProcessor_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CommandProcessor_test.mm; path = "../Swin Adventure/CommandProcessor_test.mm"; sourceTree = "<group>"; };
+		FAD0D9C81809146A0031D728 /* Location.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Location.cpp; sourceTree = "<group>"; };
+		FAD0D9C91809146A0031D728 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		FAD0D9CC18091DBB0031D728 /* Location_test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Location_test.mm; sourceTree = "<group>"; };
+		FAD10E5B17EA851600F432E8 /* SwinAdventure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwinAdventure; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD10E5E17EA851600F432E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "Swin Adventure/main.cpp"; sourceTree = "<group>"; };
+		FAD10E6017EA851600F432E8 /* SwinAdventure.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SwinAdventure.1; sourceTree = "<group>"; };
+		FAD10E7217EA957600F432E8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FAD10E7417EA957600F432E8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		FAD10E7717EA957600F432E8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		FAD10E7817EA957600F432E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FAD10E7917EA957600F432E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAD10EA117EA9DBB00F432E8 /* SwinAdventureUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwinAdventureUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD10EA617EA9DBB00F432E8 /* SwinAdventureUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwinAdventureUnitTests-Info.plist"; sourceTree = "<group>"; };
+		FAD10EA817EA9DBB00F432E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAD10EAD17EA9DBB00F432E8 /* SwinAdventureUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwinAdventureUnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		FAD10EB217EA9EB600F432E8 /* IdObj_test.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IdObj_test.mm; sourceTree = "<group>"; };
+		FAD10EB517EAA55F00F432E8 /* IdObj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IdObj.cpp; sourceTree = "<group>"; };
+		FAD10EB617EAA55F00F432E8 /* IdObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdObj.h; sourceTree = "<group>"; };
+		FADBC82F182B65920057B70B /* QuitCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QuitCommand.cpp; sourceTree = "<group>"; };
+		FADBC830182B65920057B70B /* QuitCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuitCommand.h; sourceTree = "<group>"; };
+		FAF8C831182D03BC00DA3822 /* SwinAdventureUnix.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SwinAdventureUnix.1; sourceTree = "<group>"; };
+		FAFDFF67182CF84D00D56BAD /* PutCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PutCommand.cpp; sourceTree = "<group>"; };
+		FAFDFF68182CF84D00D56BAD /* PutCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PutCommand.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAB5DA49182B249B00FC0145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB5DA4D182B249B00FC0145 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB5DA63182B249B00FC0145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB5DA69182B249B00FC0145 /* Cocoa.framework in Frameworks */,
+				FAB5DA68182B249B00FC0145 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD10E5817EA851600F432E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD10E9D17EA9DBB00F432E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD10EA217EA9DBB00F432E8 /* SenTestingKit.framework in Frameworks */,
+				FAD10EA317EA9DBB00F432E8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAB5DA4E182B249B00FC0145 /* SwinAdventureGUI */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5DA5A182B249B00FC0145 /* AppDelegate.h */,
+				FAB5DA5B182B249B00FC0145 /* AppDelegate.mm */,
+				FAB5DA5D182B249B00FC0145 /* MainMenu.xib */,
+				FAB5DA60182B249B00FC0145 /* Images.xcassets */,
+				FAB5DA4F182B249B00FC0145 /* Supporting Files */,
+			);
+			path = SwinAdventureGUI;
+			sourceTree = "<group>";
+		};
+		FAB5DA4F182B249B00FC0145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5DA50182B249B00FC0145 /* SwinAdventureGUI-Info.plist */,
+				FAB5DA51182B249B00FC0145 /* InfoPlist.strings */,
+				FAB5DA54182B249B00FC0145 /* main.m */,
+				FAB5DA56182B249B00FC0145 /* SwinAdventureGUI-Prefix.pch */,
+				FAB5DA57182B249B00FC0145 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAB5DA6C182B249B00FC0145 /* SwinAdventureGUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5DA72182B249B00FC0145 /* SwinAdventureGUITests.m */,
+				FAB5DA6D182B249B00FC0145 /* Supporting Files */,
+			);
+			path = SwinAdventureGUITests;
+			sourceTree = "<group>";
+		};
+		FAB5DA6D182B249B00FC0145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5DA6E182B249B00FC0145 /* SwinAdventureGUITests-Info.plist */,
+				FAB5DA6F182B249B00FC0145 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD10E5217EA851600F432E8 = {
+			isa = PBXGroup;
+			children = (
+				FAD10E5E17EA851600F432E8 /* main.cpp */,
+				FA4B1432182B9E1B002B5B9E /* game.txt */,
+				FAD10E5D17EA851600F432E8 /* SwinAdventure */,
+				FAD10EA417EA9DBB00F432E8 /* SwinAdventureUnitTests */,
+				FAB5DA4E182B249B00FC0145 /* SwinAdventureGUI */,
+				FAB5DA6C182B249B00FC0145 /* SwinAdventureGUITests */,
+				FAF8C82E182D03BC00DA3822 /* SwinAdventureUnix */,
+				FAD10E7117EA957600F432E8 /* Frameworks */,
+				FAD10E5C17EA851600F432E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAD10E5C17EA851600F432E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAD10E5B17EA851600F432E8 /* SwinAdventure */,
+				FAD10EA117EA9DBB00F432E8 /* SwinAdventureUnitTests.octest */,
+				FAB5DA4C182B249B00FC0145 /* SwinAdventureGUI.app */,
+				FAB5DA66182B249B00FC0145 /* SwinAdventureGUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAD10E5D17EA851600F432E8 /* SwinAdventure */ = {
+			isa = PBXGroup;
+			children = (
+				FAD10E6017EA851600F432E8 /* SwinAdventure.1 */,
+				FA4B1433182BD25A002B5B9E /* Command.cpp */,
+				FA4B1434182BD25A002B5B9E /* Command.h */,
+				FA4B1435182BD25A002B5B9E /* Game.cpp */,
+				FA4B1436182BD25A002B5B9E /* Game.h */,
+				FA9FF17D18036D18008FDD60 /* IHaveInventory.h */,
+				FAB5DA7B182B2BA600FC0145 /* CommandProcessor.h */,
+				FAB5DA7A182B2BA600FC0145 /* CommandProcessor.cpp */,
+				FADBC82F182B65920057B70B /* QuitCommand.cpp */,
+				FADBC830182B65920057B70B /* QuitCommand.h */,
+				FA9FF17918036BD6008FDD60 /* LookCommand.h */,
+				FA9FF17818036BD6008FDD60 /* LookCommand.cpp */,
+				FA11280D180E7F7A00440A33 /* MoveCommand.h */,
+				FA11280C180E7F7A00440A33 /* MoveCommand.cpp */,
+				FA292436182CEB830047A578 /* TakeCommand.cpp */,
+				FA292437182CEB830047A578 /* TakeCommand.h */,
+				FAFDFF67182CF84D00D56BAD /* PutCommand.cpp */,
+				FAFDFF68182CF84D00D56BAD /* PutCommand.h */,
+				FAD10EB617EAA55F00F432E8 /* IdObj.h */,
+				FAD10EB517EAA55F00F432E8 /* IdObj.cpp */,
+				FA6284CA18016F97009458C5 /* Bag.h */,
+				FA6284C918016F97009458C5 /* Bag.cpp */,
+				FA10DE2517EC3001003D3460 /* GameObj.h */,
+				FA10DE2417EC3001003D3460 /* GameObj.cpp */,
+				FA10DE2D17EC3010003D3460 /* Item.h */,
+				FA10DE2C17EC3010003D3460 /* Item.cpp */,
+				FA10DE2B17EC3010003D3460 /* Inventory.h */,
+				FA10DE2A17EC3010003D3460 /* Inventory.cpp */,
+				FA10DE2717EC3001003D3460 /* Player.h */,
+				FA10DE2617EC3001003D3460 /* Player.cpp */,
+				FAD0D9C91809146A0031D728 /* Location.h */,
+				FAD0D9C81809146A0031D728 /* Location.cpp */,
+				FA112807180E602000440A33 /* Path.h */,
+				FA112806180E602000440A33 /* Path.cpp */,
+			);
+			name = SwinAdventure;
+			path = "Swin Adventure";
+			sourceTree = "<group>";
+		};
+		FAD10E7117EA957600F432E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAD10E7217EA957600F432E8 /* SenTestingKit.framework */,
+				FAD10E7417EA957600F432E8 /* Cocoa.framework */,
+				FAB5DA67182B249B00FC0145 /* XCTest.framework */,
+				FAD10E7617EA957600F432E8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAD10E7617EA957600F432E8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAD10E7717EA957600F432E8 /* AppKit.framework */,
+				FAD10E7817EA957600F432E8 /* CoreData.framework */,
+				FAD10E7917EA957600F432E8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		FAD10EA417EA9DBB00F432E8 /* SwinAdventureUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAD10EB417EA9ED900F432E8 /* Classes */,
+				FAD10EA517EA9DBB00F432E8 /* Supporting Files */,
+			);
+			path = SwinAdventureUnitTests;
+			sourceTree = "<group>";
+		};
+		FAD10EA517EA9DBB00F432E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAD10EA617EA9DBB00F432E8 /* SwinAdventureUnitTests-Info.plist */,
+				FAD10EA717EA9DBB00F432E8 /* InfoPlist.strings */,
+				FAD10EAD17EA9DBB00F432E8 /* SwinAdventureUnitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD10EB417EA9ED900F432E8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FAD10EB217EA9EB600F432E8 /* IdObj_test.mm */,
+				FA10DE3517EC37F3003D3460 /* Player_test.mm */,
+				FA10DE3917EC3C82003D3460 /* Inventory_test.mm */,
+				FA10DE3717EC3884003D3460 /* Item_test.mm */,
+				FA9FF1801803EEB0008FDD60 /* LookCommand_test.mm */,
+				FA43A6B0180E958400444123 /* MoveCommand_test.mm */,
+				FAB5DA7D182B373600FC0145 /* CommandProcessor_test.mm */,
+				FA0E5B171801781A00EDA427 /* Bag_test.mm */,
+				FAD0D9CC18091DBB0031D728 /* Location_test.mm */,
+				FA11280A180E65B500440A33 /* Path_test.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		FAF8C82E182D03BC00DA3822 /* SwinAdventureUnix */ = {
+			isa = PBXGroup;
+			children = (
+				FAF8C831182D03BC00DA3822 /* SwinAdventureUnix.1 */,
+			);
+			path = SwinAdventureUnix;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAB5DA4B182B249B00FC0145 /* SwinAdventureGUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB5DA78182B249B00FC0145 /* Build configuration list for PBXNativeTarget "SwinAdventureGUI" */;
+			buildPhases = (
+				FAB5DA48182B249B00FC0145 /* Sources */,
+				FAB5DA49182B249B00FC0145 /* Frameworks */,
+				FAB5DA4A182B249B00FC0145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwinAdventureGUI;
+			productName = SwinAdventureGUI;
+			productReference = FAB5DA4C182B249B00FC0145 /* SwinAdventureGUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAB5DA65182B249B00FC0145 /* SwinAdventureGUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB5DA79182B249B00FC0145 /* Build configuration list for PBXNativeTarget "SwinAdventureGUITests" */;
+			buildPhases = (
+				FAB5DA62182B249B00FC0145 /* Sources */,
+				FAB5DA63182B249B00FC0145 /* Frameworks */,
+				FAB5DA64182B249B00FC0145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAB5DA6B182B249B00FC0145 /* PBXTargetDependency */,
+			);
+			name = SwinAdventureGUITests;
+			productName = SwinAdventureGUITests;
+			productReference = FAB5DA66182B249B00FC0145 /* SwinAdventureGUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAD10E5A17EA851600F432E8 /* SwinAdventure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD10E6417EA851600F432E8 /* Build configuration list for PBXNativeTarget "SwinAdventure" */;
+			buildPhases = (
+				FAD10E5717EA851600F432E8 /* Sources */,
+				FAD10E5817EA851600F432E8 /* Frameworks */,
+				FAD10E5917EA851600F432E8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwinAdventure;
+			productName = "Swin Adventure";
+			productReference = FAD10E5B17EA851600F432E8 /* SwinAdventure */;
+			productType = "com.apple.product-type.tool";
+		};
+		FAD10EA017EA9DBB00F432E8 /* SwinAdventureUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD10EAE17EA9DBB00F432E8 /* Build configuration list for PBXNativeTarget "SwinAdventureUnitTests" */;
+			buildPhases = (
+				FAD10E9C17EA9DBB00F432E8 /* Sources */,
+				FAD10E9D17EA9DBB00F432E8 /* Frameworks */,
+				FAD10E9E17EA9DBB00F432E8 /* Resources */,
+				FAD10E9F17EA9DBB00F432E8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwinAdventureUnitTests;
+			productName = SwinAdventureUnitTests;
+			productReference = FAD10EA117EA9DBB00F432E8 /* SwinAdventureUnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAD10E5317EA851600F432E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Alex Cummaudo";
+				TargetAttributes = {
+					FAB5DA65182B249B00FC0145 = {
+						TestTargetID = FAB5DA4B182B249B00FC0145;
+					};
+				};
+			};
+			buildConfigurationList = FAD10E5617EA851600F432E8 /* Build configuration list for PBXProject "SwinAdventure" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAD10E5217EA851600F432E8;
+			productRefGroup = FAD10E5C17EA851600F432E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAD10E5A17EA851600F432E8 /* SwinAdventure */,
+				FAD10EA017EA9DBB00F432E8 /* SwinAdventureUnitTests */,
+				FAB5DA4B182B249B00FC0145 /* SwinAdventureGUI */,
+				FAB5DA65182B249B00FC0145 /* SwinAdventureGUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAB5DA4A182B249B00FC0145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB5DA53182B249B00FC0145 /* InfoPlist.strings in Resources */,
+				FAB5DA61182B249B00FC0145 /* Images.xcassets in Resources */,
+				FAB5DA59182B249B00FC0145 /* Credits.rtf in Resources */,
+				FAB5DA5F182B249B00FC0145 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB5DA64182B249B00FC0145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB5DA71182B249B00FC0145 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD10E9E17EA9DBB00F432E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD10EA917EA9DBB00F432E8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAD10E9F17EA9DBB00F432E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAB5DA48182B249B00FC0145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FADBC826182B53AF0057B70B /* MoveCommand.cpp in Sources */,
+				FAB5DA5C182B249B00FC0145 /* AppDelegate.mm in Sources */,
+				FADBC828182B53AF0057B70B /* Bag.cpp in Sources */,
+				FAFDFF6A182CF84D00D56BAD /* PutCommand.cpp in Sources */,
+				FA4B143A182BD25A002B5B9E /* Game.cpp in Sources */,
+				FA292439182CEB830047A578 /* TakeCommand.cpp in Sources */,
+				FAB5DA55182B249B00FC0145 /* main.m in Sources */,
+				FA4B1438182BD25A002B5B9E /* Command.cpp in Sources */,
+				FADBC82A182B53AF0057B70B /* Item.cpp in Sources */,
+				FADBC823182B53AF0057B70B /* CommandProcessor.cpp in Sources */,
+				FADBC82B182B53AF0057B70B /* Inventory.cpp in Sources */,
+				FADBC82D182B53AF0057B70B /* Location.cpp in Sources */,
+				FADBC82C182B53AF0057B70B /* Player.cpp in Sources */,
+				FADBC82E182B53AF0057B70B /* Path.cpp in Sources */,
+				FADBC832182B65920057B70B /* QuitCommand.cpp in Sources */,
+				FADBC827182B53AF0057B70B /* IdObj.cpp in Sources */,
+				FADBC829182B53AF0057B70B /* GameObj.cpp in Sources */,
+				FADBC825182B53AF0057B70B /* LookCommand.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB5DA62182B249B00FC0145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB5DA73182B249B00FC0145 /* SwinAdventureGUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD10E5717EA851600F432E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD10EB717EAA55F00F432E8 /* IdObj.cpp in Sources */,
+				FA4B1437182BD25A002B5B9E /* Command.cpp in Sources */,
+				FA10DE2817EC3001003D3460 /* GameObj.cpp in Sources */,
+				FAFDFF69182CF84D00D56BAD /* PutCommand.cpp in Sources */,
+				FA6284CB18016F97009458C5 /* Bag.cpp in Sources */,
+				FA292438182CEB830047A578 /* TakeCommand.cpp in Sources */,
+				FAB5DA7C182B2BA600FC0145 /* CommandProcessor.cpp in Sources */,
+				FAD0D9CA1809146A0031D728 /* Location.cpp in Sources */,
+				FA10DE2F17EC3010003D3460 /* Item.cpp in Sources */,
+				FA11280E180E7F7A00440A33 /* MoveCommand.cpp in Sources */,
+				FADBC831182B65920057B70B /* QuitCommand.cpp in Sources */,
+				FA4B1439182BD25A002B5B9E /* Game.cpp in Sources */,
+				FA10DE2917EC3001003D3460 /* Player.cpp in Sources */,
+				FA9FF17A18036BD6008FDD60 /* LookCommand.cpp in Sources */,
+				FA10DE2E17EC3010003D3460 /* Inventory.cpp in Sources */,
+				FAD10E5F17EA851600F432E8 /* main.cpp in Sources */,
+				FA112808180E602000440A33 /* Path.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD10E9C17EA9DBB00F432E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB5DA7F182B382A00FC0145 /* CommandProcessor.cpp in Sources */,
+				FA0E5B181801781A00EDA427 /* Bag_test.mm in Sources */,
+				FA9FF17B18036BD6008FDD60 /* LookCommand.cpp in Sources */,
+				FAD0D9CD18091DBB0031D728 /* Location_test.mm in Sources */,
+				FAB5DA7E182B373600FC0145 /* CommandProcessor_test.mm in Sources */,
+				FA112809180E602000440A33 /* Path.cpp in Sources */,
+				FA9FF1811803EEB0008FDD60 /* LookCommand_test.mm in Sources */,
+				FAD10EB317EA9EB600F432E8 /* IdObj_test.mm in Sources */,
+				FAD0D9CB1809146A0031D728 /* Location.cpp in Sources */,
+				FA10DE3117EC302F003D3460 /* GameObj.cpp in Sources */,
+				FAD10EB817EAA55F00F432E8 /* IdObj.cpp in Sources */,
+				FA11280F180E7F7A00440A33 /* MoveCommand.cpp in Sources */,
+				FAA732B9183C6D8D006EFBEB /* QuitCommand.cpp in Sources */,
+				FA10DE3017EC302C003D3460 /* Player.cpp in Sources */,
+				FAA732BC183C6DD4006EFBEB /* Command.cpp in Sources */,
+				FA6284CC18016F97009458C5 /* Bag.cpp in Sources */,
+				FAA732BB183C6D8D006EFBEB /* PutCommand.cpp in Sources */,
+				FA43A6B1180E958400444123 /* MoveCommand_test.mm in Sources */,
+				FAA732BA183C6D8D006EFBEB /* TakeCommand.cpp in Sources */,
+				FA10DE3817EC3884003D3460 /* Item_test.mm in Sources */,
+				FA11280B180E65B500440A33 /* Path_test.mm in Sources */,
+				FA10DE3A17EC3C82003D3460 /* Inventory_test.mm in Sources */,
+				FA10DE3617EC37F3003D3460 /* Player_test.mm in Sources */,
+				FA10DE3317EC3036003D3460 /* Inventory.cpp in Sources */,
+				FA10DE3217EC3032003D3460 /* Item.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAB5DA6B182B249B00FC0145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAB5DA4B182B249B00FC0145 /* SwinAdventureGUI */;
+			targetProxy = FAB5DA6A182B249B00FC0145 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAB5DA51182B249B00FC0145 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB5DA52182B249B00FC0145 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FAB5DA57182B249B00FC0145 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB5DA58182B249B00FC0145 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		FAB5DA5D182B249B00FC0145 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB5DA5E182B249B00FC0145 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		FAB5DA6F182B249B00FC0145 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB5DA70182B249B00FC0145 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FAD10EA717EA9DBB00F432E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAD10EA817EA9DBB00F432E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAB5DA74182B249B00FC0145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SwinAdventureGUI/SwinAdventureGUI-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SwinAdventureGUI/SwinAdventureGUI-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FAB5DA75182B249B00FC0145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SwinAdventureGUI/SwinAdventureGUI-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SwinAdventureGUI/SwinAdventureGUI-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FAB5DA76182B249B00FC0145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwinAdventureGUI.app/Contents/MacOS/SwinAdventureGUI";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SwinAdventureGUI/SwinAdventureGUI-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SwinAdventureGUITests/SwinAdventureGUITests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FAB5DA77182B249B00FC0145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwinAdventureGUI.app/Contents/MacOS/SwinAdventureGUI";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SwinAdventureGUI/SwinAdventureGUI-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SwinAdventureGUITests/SwinAdventureGUITests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		FAD10E6217EA851600F432E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FAD10E6317EA851600F432E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FAD10E6517EA851600F432E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = SwinAdventure;
+			};
+			name = Debug;
+		};
+		FAD10E6617EA851600F432E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = SwinAdventure;
+			};
+			name = Release;
+		};
+		FAD10EAF17EA9DBB00F432E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SwinAdventureUnitTests/SwinAdventureUnitTests-Prefix.pch";
+				INFOPLIST_FILE = "SwinAdventureUnitTests/SwinAdventureUnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FAD10EB017EA9DBB00F432E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SwinAdventureUnitTests/SwinAdventureUnitTests-Prefix.pch";
+				INFOPLIST_FILE = "SwinAdventureUnitTests/SwinAdventureUnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAB5DA78182B249B00FC0145 /* Build configuration list for PBXNativeTarget "SwinAdventureGUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB5DA74182B249B00FC0145 /* Debug */,
+				FAB5DA75182B249B00FC0145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB5DA79182B249B00FC0145 /* Build configuration list for PBXNativeTarget "SwinAdventureGUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB5DA76182B249B00FC0145 /* Debug */,
+				FAB5DA77182B249B00FC0145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD10E5617EA851600F432E8 /* Build configuration list for PBXProject "SwinAdventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD10E6217EA851600F432E8 /* Debug */,
+				FAD10E6317EA851600F432E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD10E6417EA851600F432E8 /* Build configuration list for PBXNativeTarget "SwinAdventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD10E6517EA851600F432E8 /* Debug */,
+				FAD10E6617EA851600F432E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD10EAE17EA9DBB00F432E8 /* Build configuration list for PBXNativeTarget "SwinAdventureUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD10EAF17EA9DBB00F432E8 /* Debug */,
+				FAD10EB017EA9DBB00F432E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAD10E5317EA851600F432E8 /* Project object */;
+}

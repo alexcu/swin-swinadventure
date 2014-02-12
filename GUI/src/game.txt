@@ -1,0 +1,124 @@
+
+// Generated using XML to C++ Processor 
+// at bit.ly/SwinAdventure
+
+// Forward Declare all Objects
+Item *phone = nullptr;
+Bag *player_backpack = nullptr;
+Item *keys = nullptr;
+Item *oop_textbook = nullptr;
+Item *notebook = nullptr;
+Bag *wallet = nullptr;
+Item *myki = nullptr;
+Item *cash = nullptr;
+Item *id_card = nullptr;
+Location *glen_station = nullptr;
+Item *bench = nullptr;
+Path *city_glen_train = nullptr;
+Path *path_to_en = nullptr;
+Location *flinders = nullptr;
+Location *en_building = nullptr;
+Path *lift_inside_en = nullptr;
+Location *en_413 = nullptr;
+Path *en_413_window = nullptr;
+
+
+/*
+ * CREATE ALL ITEMS
+ */
+phone = new Item({"phone","iPhone"},"phone","A white iPhone 5");
+keys = new Item({"keys"},"keys","A set of six keys");
+oop_textbook = new Item({"book","textbook"},"textbook","An Introduction to Object-Oriented Programming, Budd 2001");
+notebook = new Item({"notebook","notepad"},"notepad","My trustworthy, scribbled notepad");
+myki = new Item({"myki"},"myki","My faulty myki card");
+cash = new Item({"cash","money","notes"},"cash","A $20 note");
+id_card = new Item({"id","license"},"id","A standard drivers license");
+bench = new Item({"bench"},"bench","A park bench");
+
+
+/*
+ * CREATE ALL BAGS
+ */
+
+
+// New bag
+player_backpack = new Bag({"backpack","bag","satchel"},"backpack","A black packpack");
+
+
+// New bag
+wallet = new Bag({"wallet","moneybag"},"my wallet","A leather wallet");
+
+
+/*
+ * POPULATE ITEMS IN BAGS
+ */
+
+// Add enclosing items to this bag
+Inventory *player_backpack_inv = player_backpack->get_inventory();
+player_backpack_inv->put(keys);
+player_backpack_inv->put(oop_textbook);
+player_backpack_inv->put(notebook);
+player_backpack_inv->put(wallet);
+
+// Add enclosing items to this bag
+Inventory *wallet_inv = wallet->get_inventory();
+wallet_inv->put(myki);
+wallet_inv->put(cash);
+wallet_inv->put(id_card);
+
+
+/*
+ * CREATE ALL LOCATIONS
+ */
+
+
+// New location
+glen_station = new Location({"station","glenferrie"},"a station","Glenferrie Railway Station");
+
+
+// New location
+flinders = new Location({"station"},"Flinders Street Station","Looks like the trains are all delayed---cheers Metro!");
+
+
+// New location
+en_building = new Location({"en","engineering","west"},"EN Building","The Engineering Building at Swinburne");
+
+
+// New location
+en_413 = new Location({"en413","oop","lecture"},"EN413 - OOP Lecture Room","Andrew, Buzz and Willem say hi!");
+
+
+/*
+ * CREATE ALL PATHS
+ */
+city_glen_train = new Path({"train","south"},"train","Bound for Glenferrie and the City", flinders, true);
+path_to_en = new Path({"gate","gates","walkway","north"},"gates","These myki gates lead to Swinburne", en_building, true);
+lift_inside_en = new Path({"lift","elevator"},"lift","This lift looks dodgy... once you go up, it may not work!", en_413, false);
+en_413_window = new Path({"window"},"window","Looks safe to jump", en_building, false);
+
+
+/*
+ * POPULATE LOCATION PATHS AND INVENTORIES
+ */
+ 
+// Add enclosing items to this location
+Inventory *glen_station_inv = glen_station->get_inventory();
+glen_station_inv->put(bench);
+glen_station->add_path(city_glen_train);
+glen_station->add_path(path_to_en);
+en_building->add_path(lift_inside_en);
+en_413->add_path(en_413_window);
+
+
+/*
+ * POPULATE PLAYER INVENTORY
+ */
+Inventory *player_inv = _player->get_inventory();
+player_inv->put(phone);
+player_inv->put(player_backpack);
+
+
+/*
+ * SET THE PLAYER'S INITAL LOCATION
+ */
+_player->set_location(glen_station);

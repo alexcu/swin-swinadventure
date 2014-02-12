@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SwinAdventure XML Template -->
+<!-- By  Alex Cummaudo, 1744070 -->
+
+<!-- Replace with game.txt and rebuild! -->
+
+<game>
+    <!-- Set the player's initial location to the location with the obj="glen_station" -->
+    <!-- NOTE: use underscores to separate words for obj values -->
+    <player location="glen_station">
+        <!-- Start putting items in the player's inventory -->
+        <inv>
+            <!-- Create a new item, internal obj name is phone, with name and description -->
+            <item obj="phone" name="phone" desc="A white iPhone 5">
+                <!-- Declare the keywords players will need to use to interact with this item -->
+                <ref>
+                    <id>phone</id>
+                    <id>iPhone</id>
+                </ref>
+            </item>
+            <!-- Create a new bag, internal obj name is player_backpack, with name and description -->
+            <bag obj="player_backpack" name="backpack" desc="A black packpack">
+                <!-- Declare the keywords players will need to use to interact with this bag -->
+                <ref>
+                    <id>backpack</id>
+                    <id>bag</id>
+                    <id>satchel</id>
+                </ref>
+                <!-- Start putting items inside this bag -->
+                <inv>
+                    <item obj="keys" name="keys" desc="A set of six keys">
+                        <ref>
+                            <id>keys</id>
+                        </ref>
+                    </item>
+                    <item obj="oop_textbook" name="textbook" desc="An Introduction to Object-Oriented Programming, Budd 2001">
+                        <ref>
+                            <id>book</id>
+                            <id>textbook</id>
+                        </ref>
+                    </item>
+                    <item obj="notebook" name="notepad" desc="My trustworthy, scribbled notepad">
+                        <ref>
+                            <id>notebook</id>
+                            <id>notepad</id>
+                        </ref>
+                    </item>
+                    <!-- Create a bag within a bag within the players inventory -->
+                    <bag obj="wallet" name="my wallet" desc="A leather wallet">
+                        <ref>
+                            <id>wallet</id>
+                            <id>moneybag</id>
+                        </ref>
+                        <inv>
+                            <item obj="myki" name="myki" desc="My faulty myki card">
+                                <ref>
+                                    <id>myki</id>
+                                </ref>
+                            </item>
+                            <item obj="cash" name="cash" desc="A $20 note">
+                                <ref>
+                                    <id>cash</id>
+                                    <id>money</id>
+                                    <id>notes</id>
+                                </ref>
+                            </item>
+                            <item obj="id_card" name="id" desc="A standard drivers license">
+                                <ref>
+                                    <id>id</id>
+                                    <id>license</id>
+                                </ref>
+                            </item>
+                        </inv>
+                    </bag>
+                </inv>
+            </bag>
+        </inv>
+    </player>
+    <!-- Define a new location, internally referable as glen_station, with a name and description --> 
+    <location obj="glen_station" name="a station" desc="Glenferrie Railway Station">
+        <!-- Declare the keywords players will need to use to interact with this location -->
+        <ref>
+            <id>station</id>
+            <id>glenferrie</id>
+        </ref>
+        <!-- Start adding paths or items within this location -->
+        <inv>
+            <item obj="bench" name="bench" desc="A park bench">
+                <ref>
+                    <id>bench</id>
+                </ref>
+            </item>
+            <!-- Make a new path, refereable as city_glen_train
+                 This path has a bidirectional destination (as bidir is set to true)
+                 This path's destination is the location whose internal object name is `flinders' -->
+            <path obj="city_glen_train" name="train" desc="Bound for Glenferrie and the City" bidir="true" dest="flinders">
+                <!-- Declare the keywords players will need to use to interact with this path (e.g. North, South if desired) -->
+                <ref>
+                    <id>train</id>
+                    <id>south</id>
+                </ref>
+            </path>
+            <path obj="path_to_en" name="gates" desc="These myki gates lead to Swinburne" bidir="true" dest="en_building">
+                <ref>
+                    <id>gate</id>
+                    <id>gates</id>
+                    <id>walkway</id>
+                    <id>north</id>
+                </ref>
+            </path>
+        </inv>
+    </location>
+    <location obj="flinders" name="Flinders Street Station" desc="Looks like the trains are all delayed---cheers Metro!">
+        <ref>
+            <id>station</id>
+        </ref>
+    </location>
+    <location obj="en_building" name="EN Building" desc="The Engineering Building at Swinburne">
+        <ref>
+            <id>en</id>
+            <id>engineering</id>
+            <id>west</id>
+        </ref>
+        <inv>
+            <path obj="lift_inside_en" name="lift" desc="This lift looks dodgy... once you go up, it may not work!" bidir="false" dest="en_413">
+                <ref>
+                    <id>lift</id>
+                    <id>elevator</id>
+                </ref>
+            </path>
+        </inv>
+    </location>
+    <location obj="en_413" name="EN413 - OOP Lecture Room" desc="Andrew, Buzz and Willem say hi!">
+        <ref>
+            <id>en413</id>
+            <id>oop</id>
+            <id>lecture</id>
+        </ref>
+        <inv>
+            <path obj="en_413_window" name="window" desc="Looks safe to jump" bidir="false" dest="en_building">
+                <ref>
+                    <id>window</id>
+                </ref>
+            </path>
+        </inv>
+    </location>
+</game>
